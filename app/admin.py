@@ -1,3 +1,7 @@
 from django.contrib import admin
+from app.models import Point
 
-# Register your models here.
+
+class PointAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Point, PointAdmin)

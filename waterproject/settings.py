@@ -49,8 +49,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'water',
-        'USER': 'damir',
-        'HOST': 'web398.webfaction.com',
+        'USER': 'root',
+        'HOST': 'localhost',
         'PASSWORD': '',
     }
 }
