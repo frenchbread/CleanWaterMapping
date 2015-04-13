@@ -5,8 +5,8 @@ from django.db import models
 
 class Point(models.Model):
 
-    Title = models.CharField(max_length=30)
-    Description = models.TextField(max_length=600, )
+    Title = models.CharField(max_length=100, help_text='This field is optional', blank=True)
+    Description = models.TextField(max_length=600, help_text='This field is optional', blank=True)
     Address = models.CharField(max_length=100, help_text='This field is optional', blank=True)
 
     Latitude = models.FloatField(max_length=20, )

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <script data-require="jquery@*" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://lampapp.co/static/css/style2.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.7/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.7/mapbox.css' rel='stylesheet' />
+    <!-- PureCSS -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <title>Clean water mapping</title>
+</head>
+<body style="background: url('https://raw.githubusercontent.com/chuson1996/CleanWaterMapping/master/images/lake.jpg');">
+    <div class="init-page">
+            <div class="heading-line">
+                <h1 style="font-family: 'Playfair Display SC', serif; color: white; font-size:50px; text-shadow: 0 0 2px rgba(206,211,222) ;"><b>Clean Water Mapping</b></h1>
+            </div>
+            <div class="a1">
+                <button class="pure-button">Add Sample</button>
+                <a class="pure-button" href="#main">Water Map</a>
+            </div>
+            <div class="nagivate-down-btn">
+                <a  id="#next1" href="#main"><img src="https://raw.githubusercontent.com/chuson1996/CleanWaterMapping/master/icons/navigate-down3.png" class="nagivate-down-btn"></a>
+            </div>
+    </div>
+
+
+    <br><br><br>
+
+    <!-- <button class="pure-button">Add Sample</button> -->
+    <div class="container-fluid main" id="main">
+        <div class="row">
+            <div>
+                <div id="map"></div>
+            </div>
+            <div class="searchBox">
+                <form name="destinationForm">
+                    <input type="text" name="destination" id="destination" class="form-control" placeholder="Search" style="width:370px;display: inline-block;">
+                    <button id="search-btn" class="pure-button">Search</button>
+                </form>
+            </div>
+
+            <div class="info"></div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-12"></div>
+            <div class="col-lg-3 col-md-3 col-sm-12"></div>
+        </div> -->
+    </div>
+
+
+    <script type="text/javascript" src="http://lampapp.co/static/js/script.js"></script>
+</body>
+</html>
