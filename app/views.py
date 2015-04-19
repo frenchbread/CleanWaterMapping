@@ -73,3 +73,14 @@ def mapp(request):
     context = RequestContext(request)
     context_vars.update({'p': p})
     return render_to_response(template, context_vars, context_instance=context)
+
+
+def about(request):
+
+    args = {}
+    args.update(csrf(request))
+
+    template = 'about.html'
+    context = RequestContext(request)
+
+    return render_to_response(template, args, context_instance=context)

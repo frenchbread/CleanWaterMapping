@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <title>About Us</title>
+    <style>
+        body{
+            /*background: url('brittany-195959_1920.jpg');*/
+            background-repeat: repeat-y;
+            /*background-position: center center;*/
+            background-size: cover;
+            opacity: 1;
+        }
+        h1{
+            font-family: "Playfair Display SC", serif;
+            color: black;
+            font-size:50px;
+            text-shadow: 0 0 3px rgba(206,211,222,1) ;
+        }
+        p{
+            font-family: 'Merriweather', serif;
+        }
+        .avatar{
+            max-height: 200px;
+        }
+        .vertical-bottom{
+            position: absolute;
+            bottom: 30px;
+        }
+        .horizontal-center{
+            position: absolute;
+            left:0;
+            right:0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.vertical-center').each(function(){
+//                console.log('Parent Height: ', $(this).height());
+//                console.log('Window Height: ',$(window).height());
+                $(this).offset({top: $(this).parent().height()*0.5 - $(this).height()*0.5 + $(this).parent().position().top})
+            });
+            $(window).resize(function(){
+
+                $('.vertical-center').each(function(){
+//                    console.log('This Height: ', $(this).height());
+//                    console.log('Parent Height: ',$(this).parent().height());
+                    $(this).offset({top: $(this).parent().height()*0.5 - $(this).height()*0.5 + $(this).parent().position().top})
+                });
+                // $('.vertical-center').position().top = $('window').height*0.5 - $(this).height*0.5;
+            });
+            $('#GoToAboutUsBtn').on('click',function(){
+                console.log('Height to scroll: ',$(this).parents('.row').height());
+                $('html, body').animate({
+                    scrollTop: $(this).parents('.row').height()
+                },1500)
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="height: 100vh;">
+            <div class="col-md-12 vertical-center" style="text-align: center;">
+                <h1><b>About our project</b></h1>
+                <div class="col-md-12" style="text-align: justify; background-color: rgba(255,255,255,0.5); padding: 10px 15px 10px 15px; box-shadow: 0 0 5px 5px rgba(206,211,222,1); border-radius: 25px;">
+                    <p>We will design a system consisting of several sensors, which capture and send data through SMS text messages periodically, we will analyze this data in our servers, and will compare it with the minimum water standard for human consumption. We then will create models based on comparisons of our data with that of NASA, we believe that these measurements, over time, will provide us with observable correlations between satellite data and the contamination levels we will detect with our sensors. We will also create a sample collection program, were volunteers from interested communities will be able to collaborate by sending water samples from their local sources of drinkable water, which will represent additional data for our studies, a website and a mobile application with a global map will reflect the results of our investigation by providing updated data of all the water sources , the planned mobile application, which will be available for everyone willing to collaborate with our cause, will provide them with a way to do so by collecting the GPS and Date Time information, which in return will grant a reference number, will be used to identify the sample and the water source it came from,this will grant a public source of information on.
+
+                    </p>
+                </div>
+            </div>
+            <div class="vertical-bottom horizontal-center" style="text-align: center">
+                <a href="#" class="btn btn-default" id="GoToAboutUsBtn">About us</a>
+            </div>
+        </div>
+        <div class="row" style="height: 100vh;">
+            <div class="col-md-12 vertical-center" style="text-align: center">
+                <h1><b>About us</b></h1>
+                <div class="col-md-4">
+                    <img src="" alt="Alex Sorto" class="avatar"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Amir Salah" class="avatar"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Chu Hoang Son" class="avatar"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Anatolii Shakhov" class="avatar"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Damir Mustafin" class="avatar"/>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Aktore Beket" class="avatar"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
