@@ -1,12 +1,12 @@
 from django import forms
 from models import Point
+from random import randint
 
 
 class PointsForm(forms.ModelForm):
 
     class Meta:
         model = Point
-
 
         widgets = {
             'Title': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Title'}),
@@ -21,5 +21,5 @@ class PointsForm(forms.ModelForm):
             'Fluoride': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Fluoride'}),
             'Selenium': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Selenium'}),
             'Uranium': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Uranium'}),
-            'ref_number': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'ref_number', 'disabled': 'true'}),
+            'ref_number': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Reference number', 'value': str(randint(1000000000, 9999999999))}),
         }

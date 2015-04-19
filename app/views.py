@@ -34,13 +34,11 @@ def newpoint(request):
     args.update(csrf(request))
 
     if request.POST:
-        form = PointsForm(request.POST, request.FILES)
+        form = PointsForm(request.POST)
         if form.is_valid():
-            form = form.save(commit=False)
-            #form.user = request.user
             form.save()
 
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect(reverse('mapp'))
     else:
         form = PointsForm()
 

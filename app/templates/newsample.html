@@ -28,12 +28,18 @@
                             {% csrf_token %}
                             {% for field in f %}
                                 <div class="form-group">
+                                    {% if field.name == 'ref_number' %}
+                                        <p>Reference number</p>
+                                    {% else %}
+                                        <p>{{ field.name }}</p>
+                                    {% endif %}
                                     {{ field }}
+                                    {{ field.errors  }}
                                 </div>
                             {% endfor %}
                             <div >
-                                <button type="submit" class="btn btn-primary" style="">Upload</button>
-                                <a class="btn btn-default"  href="/ ">Cancel</a>
+                                <button type="submit" class="btn btn-primary" style="">Submit</button>
+                                <a class="btn btn-default"  href="/">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -42,7 +48,6 @@
             </div>
             <div class="col-md-3"></div>
         </div>
-
     </div>
 </body>
 </html>
