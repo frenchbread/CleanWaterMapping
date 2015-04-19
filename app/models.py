@@ -1,5 +1,5 @@
 from django.db import models
-
+from random import randint
 # Create your models here.
 
 
@@ -23,7 +23,7 @@ class Point(models.Model):
 
     #water_color = models.CharField(max_length=30)
     #ph_level = models.CharField(max_length=20)
-    ref_number = models.IntegerField(max_length=10, default=0)
+    ref_number = models.CharField(max_length=10, default=randint(1000000000, 9999999999))
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):

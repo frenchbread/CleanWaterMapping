@@ -21,5 +21,5 @@ class PointsForm(forms.ModelForm):
             'Fluoride': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Fluoride'}),
             'Selenium': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Selenium'}),
             'Uranium': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'Uranium'}),
-            'ref_number': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'ref_number'}),
+            'ref_number': forms.TextInput(attrs={'class': 'form-control transparent', 'placeholder': 'ref_number', 'disabled': 'true'}),
         }

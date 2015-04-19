@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.core.urlresolvers import reverse
 from app.models import Point
 
+
 def home(request):
 
     args = {}
