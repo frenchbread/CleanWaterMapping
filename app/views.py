@@ -80,7 +80,7 @@ def about(request):
     args = {}
     args.update(csrf(request))
 
-    template = 'about.html'
+    template = 'About Us.html'
     context = RequestContext(request)
 
     return render_to_response(template, args, context_instance=context)
